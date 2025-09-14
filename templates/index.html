@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk To KV</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+<header>
+  <h1>💬 Talk To KV</h1>
+  <p>Your friendly AI diary & chat companion</p>
+  <div id="auto-type" class="typing"></div>
+</header>
+
+<main>
+  <!-- Chat Area -->
+  <section id="chat-section">
+    <div id="chat-box"></div>
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Type a message…" required>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- Contact & Review -->
+  <section id="contact-section">
+    <h2>💌 Contact & Review</h2>
+    <div id="creator-contact">
+      <p><strong>Contact Creator:</strong></p>
+      <p>📱 WhatsApp:
+         <a href="https://wa.me/2347084007921" target="_blank">+234 708 400 7921</a>
+      </p>
+      <p>📧 Email:
+         <a href="mailto:ifeanyichukwucollins008@gmail.com">ifeanyichukwucollins008@gmail.com</a>
+      </p>
+    </div>
+
+    <p>Have feedback or just want to say hi? Drop a message:</p>
+    <form id="contact-form" action="mailto:kariosvantari@gmail.com" method="post" enctype="text/plain">
+      <label>Name:
+        <input type="text" name="name" required>
+      </label>
+      <label>Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>Your Message:
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+      <button type="submit" class="btn">Send Review</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 KV LABS • Made with ❤️ in Nigeria</p>
+</footer>
+</body>
+</html>

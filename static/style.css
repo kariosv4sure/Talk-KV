@@ -1,0 +1,166 @@
+/* === Base Variables === */
+:root {
+  --kv-primary: #6C63FF;
+  --kv-dark: #1a1a1a;
+  --kv-light: #f4f4f9;
+  --kv-accent: #ff6584;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--kv-light);
+  color: var(--kv-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+  background: var(--kv-primary);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+/* ===== Layout ===== */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  background: var(--kv-dark);
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: .9rem;
+}
+
+/* ===== Chat Section ===== */
+#chat-section {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+#chat-box {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+}
+#chat-box p { margin: .5rem 0; }
+#chat-form {
+  display: flex;
+  gap: .5rem;
+  padding: 1rem;
+}
+#user-input {
+  flex: 1;
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  font-size: 1rem;
+}
+
+/* ===== Contact Form ===== */
+#contact-section {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  padding: 1.5rem;
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#contact-form label {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+#contact-form input,
+#contact-form textarea {
+  margin-top: .3rem;
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  background: var(--kv-primary);
+  color: #fff;
+  border: none;
+  padding: .7rem 1.2rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .3s;
+}
+.btn:hover { background: var(--kv-accent); }
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  header { padding: 1.5rem 1rem; }
+  main   { padding: 1rem; gap: 1rem; }
+  #chat-section, #contact-section { min-height: auto; }
+}
+
+/* === Auto Type Animation === */
+#auto-type {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-height: 1.5em; /* keep space while typing */
+  color: var(--kv-accent);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--kv-light);
+  animation: blink 0.8s infinite;
+}
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50%      { border-color: var(--kv-light); }
+}
+
+/* === Creator Contact Box === */
+#creator-contact {
+  background: var(--kv-light);
+  border-left: 4px solid var(--kv-primary);
+  padding: .8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  font-size: .95rem;
+}
+#creator-contact a {
+  color: var(--kv-primary);
+  text-decoration: none;
+}
+#creator-contact a:hover {
+  text-decoration: underline;
+}
+
+
